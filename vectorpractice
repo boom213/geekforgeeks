@@ -1,0 +1,26 @@
+#include <iostream>
+#include<bits/stdc++.h>
+#include<vector>
+
+using namespace std;
+
+int main()
+{
+    vector<int> A={1,2,44,5,222};
+    for(int i=0;i<A.size();i++){
+        cout<<A[i]<<endl;
+    }
+    A.push_back(100);
+    sort(A.begin(),A.end());
+        for(int i=0;i<A.size();i++){
+        cout<<A[i]<<" ";
+    }
+    cout<<endl;
+    bool search=binary_search(A.begin(),A.end(),3);
+    //cout<<search;
+    vector<int>::iterator it1=lower_bound(A.begin(),A.end(),44);
+    vector<int>::iterator it2=upper_bound(A.begin(),A.end(),44);
+    cout<<*it1<<endl<<*it2<<endl;
+    cout<<*it1-*it2;
+    return 0;
+}
