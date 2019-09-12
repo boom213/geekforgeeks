@@ -1,0 +1,78 @@
+Given a vector of N integers. The task is to sort the vector according to the frequency of elements. If two numbers is having same frequency, sort on the basis of element itself.
+
+Input:
+First line of input contains number of testcases T. For each testcase, first line contains number of elements in vector. Second line contains the elements of vector.
+
+Output:
+For each testcase, print the elements with its frequency.
+
+Constraints:
+1 <= T <= 100
+1 <= N <= 106
+1 <= V[i] <= 1015
+
+User Task:
+Your task is to complete the function sortWithFrequency() which should return the vector of pairs, containing element as first element of the pair and its frequency as second element of pair.
+
+Example:
+Input:
+1
+19
+1 2 2 3 3 3 4 4 4 4 5 5 5 4 3 2 5 5 3
+
+Output:
+3 5 4 5 5 5 2 3 1 1
+
+Explanation:
+Testcase 1: Frequency of 3 is 5, frequency of 4 is 5, frequency of 5 is 5, that of 2 is 3 and of 1 is 1.
+
+CODE TO SOLVE:
+{
+//Initial Template for C++
+#include <bits/stdc++.h>
+using namespace std;
+//Position this line where user code will be pasted.
+int main() {
+	
+	long long testcase;
+	cin>>testcase;
+	
+	while(testcase--){
+	    long long N;
+	    cin >> N;
+	    
+	    // declaring vector
+	    vector<long long> v;
+	    
+	    for(long long i = 0;i<N;i++){
+	        long long k;
+	        cin >> k;
+	        v.push_back(k);
+	    }
+	    
+	    // calling function to perform required operation
+	    vector<pair<long long, long long>> v_new = sortWithFrequency(v);
+	    
+	    for(auto it = v_new.begin();it!=v_new.end();it++){
+	        cout << it->first << " " << it->second << " ";
+	    }
+	    cout << endl;
+	    
+	}
+	
+	
+	return 0;
+}
+}
+/*This is a function problem.You only need to complete the function given below*/
+//User function Template for C++
+// Function to sort vector based 
+// on frequence of integers
+vector<pair<long, long>> sortWithFrequency(vector<long> v){
+    
+    vector<pair<long, long>> v_new;
+    
+    // Your code here
+    
+    return v_new;
+}
