@@ -2,6 +2,7 @@
 using namespace std;
 void follPatt(string );
 //Position this line where user code will be pasted.
+// you can do easily in JAVA by using matcher
 int main() {
 	int t;
 	cin>>t;
