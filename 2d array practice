@@ -3,7 +3,7 @@
 using namespace std;
 void printarray(const int[][3],int);
 int main(){
-    int myarray[][3]={{8,3,2},{7,5,2}};
+    int myarray[][3]={{8,3,2},{7,5,2}};// it would be better if you take user input for array
     printarray(myarray,2);
     return 0;
 }
